@@ -7,6 +7,7 @@ import { ArgumentsInterface, CommandInterface } from '../helpers/interfaces';
 import { exitProcess } from '../helpers/utils';
 import { validatePoolConfig } from '../helpers/validations';
 import * as all from '../miners/all/miner';
+import * as arxiv from '../miners/arxiv/miner';
 import * as files from '../miners/files/miner';
 import * as gnews from '../miners/news/gnews/miner';
 import * as newsApi from '../miners/news/news-api/miner';
@@ -73,6 +74,9 @@ const command: CommandInterface = {
 				return;
 			case CLI_ARGS.sources.gnews.name:
 				await gnews.run(poolConfig);
+				return;
+			case CLI_ARGS.sources.arxiv.name:
+				await arxiv.run(poolConfig);
 				return;
 			case CLI_ARGS.sources.all.name:
 				await all.run(poolConfig);

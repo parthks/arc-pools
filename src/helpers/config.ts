@@ -83,6 +83,9 @@ export const CLI_ARGS = {
 		gnews: {
 			name: 'gnews',
 		},
+		arxiv: {
+			name: 'arxiv',
+		},
 		all: {
 			name: 'all',
 		},
